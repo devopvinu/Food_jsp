@@ -10,7 +10,7 @@ if (request.getMethod().equals("POST")) {
 
     try {
         Class.forName("oracle.jdbc.OracleDriver");
-        Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "vinod");
+         Connection con = DriverManager.getConnection("jdbc:oracle:thin:@44.212.39.66:1521:XE", "system", "jake143");
 
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery("SELECT * FROM log");
