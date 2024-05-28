@@ -26,7 +26,7 @@ Connection connection;
 
 try {
   Class.forName("oracle.jdbc.OracleDriver");
-  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "vinod");
+  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@44.212.39.66:1521:XE", "system", "jake143");
 
     String sql2 = "SELECT COUNT(*) AS count FROM cart_items";
     PreparedStatement stmt2 = con.prepareStatement(sql2);
@@ -54,7 +54,7 @@ try {
 
         try {
             Class.forName("oracle.jdbc.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "vinod");
+            Connection con = DriverManager.getConnection("jdbc:oracle:thin:@44.212.39.66:1521:XE", "system", "jake143");
 
             PreparedStatement stmt = con.prepareStatement("DELETE FROM cart_items WHERE id = ?");
             stmt.setString(1, did);
@@ -352,7 +352,7 @@ try {
 <%
    try {
       Class.forName("oracle.jdbc.OracleDriver");
-      Connection cone = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "vinod");
+       Connection cone = DriverManager.getConnection("jdbc:oracle:thin:@44.212.39.66:1521:XE", "system", "jake143");
 
       Statement stmte = cone.createStatement();
       ResultSet rs = stmte.executeQuery("SELECT * FROM cart_items");
@@ -512,7 +512,7 @@ try {
                           
                               try {
                                   Class.forName("oracle.jdbc.OracleDriver");
-                                  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "vinod");
+                                  Connection con = DriverManager.getConnection("jdbc:oracle:thin:@44.212.39.66:1521:XE", "system", "jake143");
                           
                                   PreparedStatement stmt = con.prepareStatement("INSERT INTO cart_items (id,title,price,quantity) VALUES (?, ?, ?, ?)");
                                   stmt.setInt(1, ct);
